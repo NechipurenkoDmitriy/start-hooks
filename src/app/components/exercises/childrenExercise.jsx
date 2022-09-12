@@ -10,12 +10,26 @@ const ChildrenExercise = () => {
                 <code>React.Children.map</code> так и{" "}
                 <code>React.Children.toArray</code>
             </p>
-
-            <Component />
-            <Component />
-            <Component />
+            <NumListComponent>
+                <Component />
+                <Component />
+                <Component />
+            </NumListComponent>
         </CollapseWrapper>
     );
+};
+
+// не понял задание
+const NumListComponent = ({ children }) => {
+    // console.log("children HW", children);
+    return React.Children.map(children, (child, i) => {
+        console.log("child HW", i, child);
+        return (
+            <div>
+                {i + 1}. {child}
+            </div>
+        );
+    });
 };
 
 const Component = () => {

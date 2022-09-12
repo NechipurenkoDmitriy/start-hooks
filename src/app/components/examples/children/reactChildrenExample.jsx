@@ -17,7 +17,7 @@ const FormComponent = ({ children }) => {
     };
 
     return React.Children.map(children, (child) => {
-        console.log(child); ///
+        // console.log(child); ///
         const config = {
             ...child.props,
             onChange: handleChange,
